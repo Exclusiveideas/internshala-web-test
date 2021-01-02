@@ -246,7 +246,7 @@ hr{ border-color: yellow;}
              khgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwguaadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p>
               <form method="post">
                   <input type="email" name="email" placeholder="example@gmail.com" required><button type="button">Subscribe</button>
-             <p>Copyright 2018 jimoh muftaudeen.<br/>.ALL RIGHTS RESERVED.</p><br/><br/>
+             <p>Copyright &copy 2018 jimoh muftaudeen.<br/>.ALL RIGHTS RESERVED.</p><br/><br/>
              <img src="https://www.shutterstock.com/image-photo/valencia-spain-march-05-2019-collection-1539114044">
           </div>
    </section>
