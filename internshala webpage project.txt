@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>// Create the dropdown base
+$("<select />").appendTo("nav");
+
+// Create default option "Go to..."
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "EXPLORE"
+}).appendTo("nav select");
+
+// Populate dropdown with menu items
+$("nav a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo("nav select");
+});
+$("nav select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});</script>
+<style>
+html{
+   max-width: 980px;
+}
+#slider{ width: 100%; background-image:url("https://unsplash.com/photos/XKIO6ZgCObo");}
+nav {background-color:orange;} 
+nav ul     { display: none; }
+nav select { display: inline-block; }
+#slider-text { color: white; text-align: justify; justify-content: centre; vertical-align:middle;}
+#learn_more { background-color:white; width:50px; height:44px;}
+#learn_more.hover { background-color: black;}
+#second_section { background-color: white;}
+.vision {background-color:orange; border: 1px solid black;}       
+#apart_image { width: 100%; height: 100%;}
+#apart { background-color: purple; width: 100%; height: 100%;}   
+#rooms { background-color: white;}
+.ul_rooms { display: inline;}
+#apart_button { background-color: none; border: 2px solid white; width: 50px; height: 44px;}
+#apart_button.hover { background color: white;}
+#services_div { background-color: #424242;}
+table { border: none; width: 100%; height: 100%;}
+h3.hover { color: yellow;}
+#appoint_div { background-color: orange; width: 100%; height: 100%;}
+#appoint_button {border: 2px solid black; background-color:none;}
+#appoint_button.hover {background-color: black; color: white;}
+.restaurant_button { border: 2px solid black; background-color:none;}
+.restaurant_button.hover { background-color: black; color: white;}
+#rest_div { background-color: white; width: 100%; height: 100%;}
+img { width: 100%; height: 100%;}
+#here_div { background-image: url(""); width: 100%;  height: 100%;}
+hr{ border-color: yellow;}
+#blog_div { background color: white; width: 100%; height: 100%;}
+#footer_para { text-align: justify; justify-content: centre;}
+#footer_div { background-color: purple; width: 100%; height: 100%;}
+
+</style>
+</head>
+<body>
+   <section>
+    <div>
+         <a href=""><img src="https://www.shutterstock.com/image-vector/real-estate-simple-logo-design-1183400719"></a>
+<nav> 
+
+  <ul> 
+    <li><a href="/" class="active">Home</a></li> 
+    <li><a href="#">Features</a></li> 
+    <li><a href="#">Properties</a></li> 
+    <li><a href="#">Team</a></li> 
+    <li><a href="#">Contact</a></li> 
+  </ul> 
+  
+  <select> 
+    <option value="" selected="selected">Select</option> 
+    
+    <option value="/">Home</option> 
+    <option value="#">Features</option> 
+    <option value="#">Properties</option> 
+    <option value="#">Team</option> 
+    <option value="#">Contact</option> 
+  </select> 
+
+</nav>
+    </div>
+    <div id="slider">
+    <div id="slider-text">
+       <h1>Everything You Need All In One Place</h1><br/>
+        <p>Now Leasing</p>
+       <a href="#"><button id= "learn_more" type="button">learn more</button></a>
+    </div>
+    </div>
+   </section>
+   <section>
+       <div id="second_section">
+       <div>
+         <h2>WHY CHOOSE SKYVIEW HOTELS?<h2>
+       </div>
+       <div>
+          <img src="https://dryicons.com/icon/coin-stack-icon-6399"><br/><h2>ALL-INCLUSIVE PRICING<h2><br/><p>lore ipsum kjfdfnsf fugjkfuifg ifsfjksfui</p>
+          <img src="https://www.shutterstock.com/image-vector/wifi-icon-329468402"><br/><h2>HIGH SPEED WIFI</h2><br/><p>lore ipsum kjfdfnsf fugjkfuifg ifsfjksfui</p>
+          <img src="https://www.shutterstock.com/image-vector/water-drop-icon-433563427"><br/><h2>PURIFIED WATER</h2><br/><p>lore ipsum kjfdfnsf fugjkfuifg ifsfjksfui</p>
+          <img src="https://www.shutterstock.com/image-vector/hand-drawing-slice-cake-sprinkles-641616922"><br/><h2>TASTY RESTAURANT</h2><br/><p>lore ipsum kjfdfnsf fugjkfuifg ifsfjksfui</p>
+       </div>
+       </div>
+   </section>
+   <section>
+      <div> 
+          <h2>ABOUT US</h2><br/><p>lore ipsum kjfdfnsf fugjkfuifg ifsfjksfuilore ipsum kjfdfnsf fugjkfuifg ifsfjksfuilore ipsum kjfdfnsf fugjkfuifg ifsfjksfuilore ipsum kjfdfnsf fugjkfuifg ifsfjksfui</p>
+      <div>
+         <table>
+            <tr class="vision">
+               <td onclick = "Vision()">OUR VISION</td>
+            </tr>
+            <tr class="vision">
+               <td onclick = "Mission()">OUR MISSION</td>
+            </tr>
+         </table>
+         <p id="change"></p>
+      </div>
+      </div>
+   </section>
+   <section>
+         <div id="apart">
+            <h2>OUR APARTMENTS</h2>
+         <div>
+            <img id="apart_image" src="https://unsplash.com/photos/MP0bgaS_d1c"/>
+          </div>
+          <div id="rooms">
+             <h4>Comfort Rooms</h4><br/>
+                       <ul class="ul_rooms"><li>Balcony</li><li>Air conditoning</li><li>Safe deposit box</li><li>LCD flatscreen TV</li><li>Direct dial telephone</li></ul></td>
+             <h4>Family Rooms</h4><br/>
+                     <ul class="ul_rooms"><li>Free Wifi</li><li>Mini Bar</li><li>Air conditioning</li><li>Balcony</li><li>Amazing view</li></ul></td>
+             <h4>Superior Rooms</h4><br/>
+                       <ul class="ul_rooms"><li>Safe Deposit box</li><li>Balcony</li><li>Suite</li><li>Free wifi</li><li>Mini bar</li><li>lore ipsum</li></ul></td>
+         </div>
+              <a id="apart_more" href="#"><button id="apart_button" type="button">VIEW MORE</button></a>
+         </div>
+   </section>
+   <section>
+         <div id="services_div">
+           <h2>OUR SERVICES</h2><br/><br/>
+               <p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p>
+                  <table id="services_table">
+                    <tr>
+                     <td><img src="https://www.shutterstock.com/image-vector/shield-icon-checkmark-middle-protection-concept-1519815749"></td><td><h3>24/7 SECURITY</h3><br/><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p></td>
+                    </tr>
+                  <td><img src="https://www.shutterstock.com/image-vector/wifi-icon-329468402"></td><td><h3>FREE HIGH-SPEED WIFI</h3><br/><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p></td>
+                </tr>
+                <tr>
+                  <td><img src="https://www.shutterstock.com/image-vector/dog-head-vector-icon-animalpet-symbol-1205536021"></td><td><h3>PET CARE</h3><br/><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p></td>
+                </tr> 
+                <tr>
+                  <td><img src="https://www.shutterstock.com/image-vector/cupboard-icon-line-element-vector-illustration-1165784908"></td><td><h3>FURNITURE CLEANING & REPAIR</h3><br/><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p></td>
+                </tr>
+           </table>
+        </div>
+   </section>
+   <section>
+        <div id="appoint_div">
+          <h2>MAKE AN APPOINTMENT NOW!</h2><br/>
+          <h2> +810 234 567 890</h2><br/> 
+          <button id="appoint_button" type="button">Make An Appointment</button>
+        </div>
+   </section>
+   <section>
+        <div id="rest_div">
+          <h2>Restaurants</h2><br/><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p><br/><br/>
+            <button class="restaurant_button" type="button">Read more</button><br/><br/>
+            <img src="https://unsplash.com/photos/GliaHAJ3_5A"/><br/><br/>
+            <img src="https://unsplash.com/photos/hCU4fimRW-c"/><br/><br/>
+            <h2>Wellness</h2><br/><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p><br/><br/>
+            <button class="restaurant_button" type="button">Read more</button><br/><br/>
+            <h2>Have Fun</h2><br/><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p><br/><br/>
+            <button class="restaurant_button" type="button">Read more</button><br/><br/>
+            <img src="https://unsplash.com/photos/M7GddPqJowg"/><br/><br/>
+        </div>
+   </section>
+   <section>
+        <div id="here_div">
+           <h2>WE ARE HERE</h2><<br/><br/>
+           <table>
+                <tr>
+                <td><img src="https://www.shutterstock.com/image-vector/pin-icon-template-color-editable-gps-1675322164"></td><td><p><b>Address:</b> 564 NY road</p></td>
+                </tr>
+                <tr>
+                  <td><img src="https://www.shutterstock.com/image-vector/phone-icon-telephone-symbol-call-vector-1519381412"></td><td><p><b>Phone:</b> +234 567 890</p></td>
+                </tr>
+                <tr>
+                  <td><img src="https://www.shutterstock.com/image-vector/email-envelope-icon-vector-illustration-1672898794"></td><td><p><b>Mail:</b> example@domain.com</p></td>
+                </tr>
+            </table>
+       </div>
+   </section>
+   <section>
+           <div id="blog_div">
+              <h2>FROM OUR BLOG</h2><br/><br/>
+             <table>
+                 <tr>
+                    <td><hr><br/><h3>24 Feb</h3></td>
+                 </tr>
+                 <tr>
+                    <td><h3>7 NATURAL WAYS TO FALL ASLEEP TESTED</h3></td>
+                 </tr>
+                 <tr>
+                    <td><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p></td>
+                 </tr>
+                 <tr>
+                       <td><p>technology<b>/</b>wellness<b>/</b>posted by Admin</p></td>
+                 </tr>
+                 <tr>
+                    <td><hr><br/><h3>27 Jun</h3></td>
+                 </tr>
+                 <tr>
+                    <td><h3>HOW TO IMPROVE YOUR SLEEP NATURALLY</h3></td>
+                 </tr>
+                 <tr>
+                    <td><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p></td>
+                 </tr>
+                 <tr>
+                       <td><p>technology<b>/</b>wellness<b>/</b>posted by Admin</p></td>
+                 </tr>
+                 <tr>
+                    <td><hr><br/><h3>27 Jun</h3></td>
+                 </tr>
+                 <tr>
+                    <td><h3>10 NATURAL WAYS TO SLEEP BETTER</h3></td>
+                 </tr>
+                 <tr>
+                    <td><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p></td>
+                 </tr>
+                 <tr>
+                       <td><p>technology<b>/</b>wellness<b>/</b>posted by Admin</p></td>
+                 </tr>
+             </table>
+          </div>
+    </section>
+    <section>
+          <div id="footer_div">
+              <img src="https://www.shutterstock.com/image-vector/real-estate-simple-logo-design-1183400719"><br/><p id="footer_para">aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywe</p><br/><p>aadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwguaadgsd8ufygasj
+             khgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwguaadgsd8ufygasjkhgskrguigsjkwiuhnjoierjknkfgiurwkrjhriuwrgriuh9uwjiuuewjkhwiwywehfuighrguihuiyhwoitypthwtwgu</p>
+              <form method="post">
+                  <input type="email" name="email" placeholder="example@gmail.com" required><button type="button">Subscribe</button>
+             <p>Copyright 2018 jimoh muftaudeen.<br/>.ALL RIGHTS RESERVED.</p><br/><br/>
+             <img src="https://www.shutterstock.com/image-photo/valencia-spain-march-05-2019-collection-1539114044">
+          </div>
+   </section>
+<script>
+function Vision() {
+  document.getElementByid("change").innerHTML = "OUR VISION is to lore ipsum jgduakyfgw ehgkfuwgyff fjhgfeufgwi ygeqfguf yguwefh  guw wgwygw wygwufghgegfef."
+}
+function Mission() {
+  document.getElementById("change").innerHTML = "OUR MISSION is to lore ipsum dyfyeuk ygeyqeg ygwkfgyue yuyefwfyw yujhwe fyu gyfgwef gwfygil efyuwegek jtf tfty t."
+}
+</script>
+</body>
